@@ -3,9 +3,9 @@ os: linux
 
 files:
   - source: /
-    destination: /home/ubuntu/sangtech-folder
+    destination: /home/ubuntu/sangtech-deploy-folder
 permissions:
-  - object: /home/ubuntu/sangtech-folder
+  - object: /home/ubuntu/sangtech-deploy-folder
     owner: ubuntu
     group: ubuntu
     mode: 755
