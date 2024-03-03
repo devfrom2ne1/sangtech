@@ -10,7 +10,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/")
 public class HomeController {
     @GetMapping("/")
-    public String home() {
+    public String Home() {
         return "형빈이와 함께하는 상테크 v.1";
+    }
+
+    @GetMapping("/mycard")
+    public String Mycard() {
+        return "카드 등록";
     }
 }
