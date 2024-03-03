@@ -7,10 +7,10 @@ on:
       - 'releases/**'
 
 env:
-AWS_REGION: ap-northeast-2
-AWS_S3_BUCKET: calc-s3-bucket
-AWS_CODE_DEPLOY_APPLICATION: calc-CD
-AWS_CODE_DEPLOY_GROUP: calc-CD-group
+  AWS_REGION: ap-northeast-2
+  AWS_S3_BUCKET: calc-s3-bucket
+  AWS_CODE_DEPLOY_APPLICATION: calc-CD
+  AWS_CODE_DEPLOY_GROUP: calc-CD-group
 
 jobs:
   build-with-gradle:
