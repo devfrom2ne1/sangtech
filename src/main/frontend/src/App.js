@@ -1,9 +1,8 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.css';
 
 function App() {
-
     const [message, setMessage] = useState("");
 
     useEffect(() => {
@@ -12,7 +11,8 @@ function App() {
             .then(message => {
                 setMessage(message);
             });
-    },[])
+    }, []);
+
     return (
         <div className="app">
             <header className="header">
@@ -23,8 +23,12 @@ function App() {
                     {/* 여기에 컨텐츠를 추가하세요 */}
                     <p>여기에 내용이 쫚쫙 들어갈 예정!</p>
                     api통신내역 : {message}
+                    아니 근데 바뀐거야 만거야?
                 </section>
             </main>
+            <div className="floating-button">
+                <button className="add-button">+</button>
+            </div>
             <footer className="footer">
                 <nav className="navbar">
                     <a href="#" className="nav-link">카드선택</a>
