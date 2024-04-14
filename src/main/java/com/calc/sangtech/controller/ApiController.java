@@ -12,11 +12,4 @@ public class ApiController {
         return "카드 등록";
     }
 
-    @GetMapping("/api/calendar")
-    public String Calendar() {
-        //GetDayUtil getDayUtil = new GetDayUtil();
-        //getDayUtil.util();
-        return "캘린더";
-    }
-
 }
