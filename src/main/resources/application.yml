@@ -1,0 +1,16 @@
+# JPA
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url:  jdbc:mysql://calc-mysql.c1ee8usy6lrb.ap-northeast-2.rds.amazonaws.com/sangtech
+    username: root
+    password: 12345678
+  jpa:
+    database: MYSQL
+    database-platform: org.hibernate.dialect.MySQLDialect
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
