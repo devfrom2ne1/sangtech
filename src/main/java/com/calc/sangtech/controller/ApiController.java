@@ -6,9 +6,9 @@ import org.springframework.web.bind.annotation.RestController;
 @Tag(name = "테스트 API", description = "테스트용 API입니다.")
 @RestController
 public class ApiController {
-    @GetMapping("/api/v1/mycard")
-    public String Mycard() {
-        return "카드 등록";
+    @GetMapping("/api/v1/test")
+    public String Test() {
+        return "this is test api";
     }
 
 }
