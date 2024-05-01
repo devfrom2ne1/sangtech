@@ -15,17 +15,17 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 public class Datetime {
 
-    private LocalDateTime createAt;
-    private LocalDateTime updateAt;
+    private LocalDateTime sysRegDate;
+    private LocalDateTime sysUpdDate;
 
     @PrePersist // 데이터 생성이 이루어질때 사전 작업
     public void prePersist() {
-        this.createAt = LocalDateTime.now();
-        this.updateAt = this.createAt;
+        this.sysRegDate = LocalDateTime.now();
+        this.sysUpdDate = this.sysRegDate;
     }
 
     @PreUpdate // 데이터 수정이 이루어질때 사전 작업
     public void preUpdate() {
-        this.updateAt = LocalDateTime.now();
+        this.sysUpdDate = LocalDateTime.now();
     }
 }

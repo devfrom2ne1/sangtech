@@ -1,6 +1,7 @@
 package com.calc.sangtech.domain.user;
 
 import com.calc.sangtech.domain.Datetime;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
@@ -9,42 +10,40 @@ import lombok.experimental.SuperBuilder;
 
 @Getter
 @Setter
-@ToString   // 객체가 가지고 있는 정보나 값들을 문자열로 만들어 리턴하는 메서드
-@NoArgsConstructor  // 인자 없이 객체 생성 가능
+@ToString
+@NoArgsConstructor  //파라미터가 없는 기본 생성자 생성
 @Data
-@EqualsAndHashCode(callSuper = true)
+@EqualsAndHashCode(callSuper = true) // 두 객체가 논리적으로 같은지 비교하게 해줌
 @SuperBuilder
 @Entity
-@Table(name = "User")
+@Table(name = "USER_BASE")
 public class User extends Datetime {
     @Id
-    private String id;
-    private String pw;
-    private String tel;
+    @Column(name = "USER_ID", length = 100)
+    private String userId;
+
+    @Column(name = "USER_NM", nullable = false, length = 255)
+    private String userNm;
+
+    @Column(name = "TEL_NO", length = 13)
+    private String telNo;
+
+    @Column(name = "FIREBASE_UID", length = 255)
+    private String firebaseUid;
+
+    @Column(name = "EMAIL", length = 255)
     private String email;
-    private String ntry_dt;
-    private String trmn_dt;
 
-    @Builder
-    public User(String id, String pw, String tel, String email, String ntry_dt, String trmn_dt) {
-        this.id = id;
-        this.pw = pw;
-        this.tel = tel;
-        this.email = email;
-        this.ntry_dt = ntry_dt;
-        this.trmn_dt = trmn_dt;
-    }
+    @Column(name = "ALRM_YN", columnDefinition = "CHAR(1) DEFAULT 'N'")
+    private char alrmYn;
 
-    private User toEntity(){
-        User user = User.builder()
-                .id(this.id)
-                .pw(this.pw)
-                .tel(this.tel)
-                .email(this.email)
-                .ntry_dt(this.ntry_dt)
-                .trmn_dt(this.trmn_dt)
-                .build();
-        return user;
-    }
+    @Column(name = "JOIN_DT", length = 8)
+    private String joinDt;
+
+    @Column(name = "TRMN_DT", length = 8)
+    private String trmnDt;
+
+    @Column(name = "USER_TYPE", length = 3)
+    private String userType;
 
 }
