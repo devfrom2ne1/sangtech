@@ -1,6 +1,9 @@
 spring:
-  profiles:
-    active: prod
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://calc-mysql.c1ee8usy6lrb.ap-northeast-2.rds.amazonaws.com/sangtech
+    username: root
+    password: 12345678
   jpa:
     database: MYSQL
     database-platform: org.hibernate.dialect.MySQLDialect
