@@ -8,5 +8,5 @@ public interface UserService {
     public User join(UserJoinRequestDto requestDto);
     public User login(String firebaseUid);
     public User update(UserUpdateRequestDto requestDto);
-    Object terminate(Long userId);
+    public User terminate(Long userId);
 }

@@ -1,6 +1,7 @@
 package com.calc.sangtech.domain.user;
 
 import com.calc.sangtech.domain.BaseTimeEntity;
+import com.calc.sangtech.domain.code.Role;
 import com.calc.sangtech.web.dto.user.UserUpdateRequestDto;
 import jakarta.persistence.*;
 import lombok.Builder;
@@ -48,7 +49,7 @@ public class User extends BaseTimeEntity {
     private Role userType;
     @Builder
     public User(String userNm, String telNo, String firebaseUid, String email,
-                              char alrmYn,char actYn, String joinDt, Role userType) {
+                char alrmYn,char actYn, String joinDt, Role userType) {
         this.userNm = userNm;
         this.telNo = telNo;
         this.firebaseUid = firebaseUid;
@@ -79,7 +80,6 @@ public class User extends BaseTimeEntity {
             this.email = userUpdateRequestDto.getEmail();
 
         if(userUpdateRequestDto.getAlrmYn() != '\u0000'){
-            System.out.println("4444");
             this.alrmYn = userUpdateRequestDto.getAlrmYn();
         }
 

@@ -1,5 +1,6 @@
-package com.calc.sangtech.domain.user;
+package com.calc.sangtech.repository.user;
 
+import com.calc.sangtech.domain.user.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

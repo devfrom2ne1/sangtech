@@ -1,4 +1,4 @@
-package com.calc.sangtech.domain.user;
+package com.calc.sangtech.domain.code;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

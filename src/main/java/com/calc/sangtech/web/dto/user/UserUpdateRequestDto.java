@@ -1,6 +1,6 @@
 package com.calc.sangtech.web.dto.user;
 
-import com.calc.sangtech.domain.user.Role;
+import com.calc.sangtech.domain.code.Role;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 

@@ -1,8 +1,8 @@
 package com.calc.sangtech.user;
 
-import com.calc.sangtech.domain.user.Role;
+import com.calc.sangtech.domain.code.Role;
 import com.calc.sangtech.domain.user.User;
-import com.calc.sangtech.domain.user.UserRepository;
+import com.calc.sangtech.repository.user.UserRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
